@@ -14,6 +14,7 @@ Response _rootHandler(Request req) {
 }
 
 Response _echoHandler(Request request) {
+  // ignore: deprecated_member_use
   final message = params(request, 'message');
   return Response.ok('$message\n');
 }
@@ -31,5 +32,6 @@ void main(List<String> args) async {
   print('Server listening on port ${server.port}');
 
   String oi = 'oi';
+  print(oi);
   print(oi);
 }
